@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tetris - Ojile Victor</title>
+    <link rel="stylesheet" href="tetris.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <main>
+      <section class="main-page">
+        <div class="welcome" id="welcome-page" aria-hidden="false">
+                <h1>TETRIS</h1>
+                <div><i class="fa fa-circle-o-notch fa-spin"></i></div>
+            </div>
+         <div role="navigation" class="navigation hide">
+                <div class="heading"><h1>TETRIS</h1></div>
+                <nav class="nav-main">
+                    <div id="resume" class="hide" tabindex="1">RESUME</div> 
+                    <div id="new-game" tabindex="1">NEW GAME</div>
+                    <div tabindex="0">LEVEL</div>
+                    <div tabindex="0">HIGH SCORE</div>
+                    <div tabindex="0">HELP</div>
+                </nav>
+            </div>
+      </section>
+      <section id="game-section">
+        <div class="game">
+                <div class="flex-container">
+                    <div class="svg">
+                        <svg width="100%" height="99%" id="svg"></svg>
+                    </div>
+                    <div class="info">
+                        <div id="new-block"></div>
+                        <div id="info-block">
+                            <div><h2>Score</h2></div>
+                            <p id="score">0</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="fuck-off"></div>
+            </div>
+      </section>
+    </main>
+  </body>
+  <script id="welcome">
+    let welcome = document.getElementById('welcome-page');
+    let navigation = document.getElementsByClassName('navigation')[0];
+    setTimeout(() => {
+        welcome.style.display = 'none';
+        welcome.ariaHidden = "true";
+        navigation.classList.remove('hide');
+        document.getElementById('welcome').remove();
+    }, 2000);
+</script>
+<script src="logic.js"></script>
+</html>

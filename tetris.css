@@ -1,170 +1,255 @@
 @font-face {
-font-family: "merriweather";
-src: url(MerriweatherSans-VariableFont_wght.ttf);
-}
-@font-face {
-    font-family: "Roboto";
-    src: url(Roboto-Medium.ttf);
-}
-:root {
-    --blue: #007bff;
-    --indigo: #6610f2;
-    --purple: #6f42c1;
-    --pink: #e83e8c;
-    --red: #dc3545;
-    --orange: #fd7e14;
-    --yellow: #ffc107;
-    --green: #28a745;
-    --teal: #20c997;
-    --cyan: #17a2b8;
-    --white: #fff;
-    --gray: #6c757d;
-    --gray-dark: #343a40;
-    --primary: #007bff;
-    --secondary: #6c757d;
-    --success: #28a745;
-    --info: #17a2b8;
-    --warning: #ffc107;
-    --danger: #dc3545;
-    --light: #f8f9fa;
-    --dark: #343a40;
-    --breakpoint-xs: 0;
-    --breakpoint-sm: 576px;
-    --breakpoint-lg: 992px;
-    --breakpoint-xl: 1200px;
-    --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-}
-html {
-    font-family: sans-serif;
-    -webkit-text-size-adjust: 100%;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-}
-body {
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    background-color: #000;
-    color: var(--white);
-    position: relative;
-    user-select: none;
-}
-/*
----------------------------------------------------------------------
-GENERAL STYLES
--------------------------------------------------------------------------------------------------
-*/
-* {
-    box-sizing: border-box;
-}
-.hide {
-    display: none;
-}
-.show {
-    display: block;
+ font-family: "Roboto";
+ src: url(Roboto-Medium.ttf);
 }
 
-/*
----------------------------------------------------------------------
-GENERAL STYLES ENDS
--------------------------------------------------------------------------------------------------
-*/
-.main-page {
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    width: 100%;
+html {
+ font-family: sans-serif;
+ -webkit-text-size-adjust: 100%;
+ -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
+
+body {
+ margin: 0;
+ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+ background-color: #000;
+ color: whitesmoke;
+ position: relative;
+ user-select: none;
+}
+
+* {
+ box-sizing: border-box;
+}
+
+.hide {
+ display: none;
+}
+
+main {
+ max-width: 400px;
+ margin: 0 auto;
+}
+.main-page,
+#level-section,
+#high_score_section, #help_section {
+ min-height: 100%;
+ position: absolute;
+ top: 0;
+ left: 0;
+ z-index: 1;
+ width: 100%;
+}
+
 .welcome {
-    background-color: #000;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: flexbox;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: var(--white);
-    height: 100vh;
+ background-color: #000;
+ display: -webkit-flex;
+ display: flexbox;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+ text-align: center;
+ height: 100vh;
 }
-.welcome .fa {
-    font-size: 30px;
+
+.circle {
+ width: 30px;
+ height: 30px;
+ border-radius: 50%;
+ background-color: inherit;
+ border: 3px solid whitesmoke;
+ position: relative;
+ -webkit-animation-name: spin;
+ animation-name: spin;
+ -webkit-animation-duration: 1200ms;
+ animation-duration: 1200ms;
+ -webkit-animation-timing-function: linear;
+ animation-timing-function: linear;
+ 
+-webkit-animation-iteration-count: infinite;
+animation-iteration-count: infinite;
+}
+
+.dot-circle {
+ position: absolute;
+ top: -4px;
+ left: 45%;
+ width: 6px;
+ height: 6px;
+ background-color: black;
+ border-radius: 50%;
+}
+@-webkit-keyframes spin {
+ 0% {
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
+ }
+ 
+ to {
+  -webkit-transform: rotate(360deg);
+  transform: rotate(360deg);
+ }
+}
+
+@keyframes spin {
+ 0% {
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
+ }
+
+ to {
+  -webkit-transform: rotate(360deg);
+  transform: rotate(360deg);
+ }
 }
 .welcome h1 {
-    font-size: 2rem;
+ font-size: 2rem;
 }
-.heading {
-    border-bottom: 1px solid gray;
-    padding-bottom: 2vh
+
+.heading,
+.level {
+ border-bottom: 1px solid gray;
+ padding-bottom: 2vh
 }
+
 .navigation {
-    height: 100vh;
-    padding: 3vh 0vh;
-    background-color: black;
-    font-weight: bold;
-    font-family: merriweather, Roboto, sans-serif;
-    letter-spacing: 1px;
-    text-align: center;
+ min-height: 100vh;
+ padding: 3vh 0vh;
+ background-color: black;
+ font-weight: bold;
+ font-family: Roboto, sans-serif;
+ letter-spacing: 1px;
+ text-align: center;
 }
-.nav-main div {
-    padding: 4vh 0vh;
-    border: 2px solid black;
-    cursor: pointer;
-    border-style: solid none solid none;
+
+input {
+ background-color: inherit;
+ color: whitesmoke;
+ display: block;
+ width: 100%;
+ padding: 30px 0px;
+ border: 2px solid black;
+ border-style: solid none solid none;
 }
-.nav-main div:hover, .nav-main div:focus {
-    background-color: rgb(20, 17, 20);
-    border: 2px solid rgb(32, 26, 32);
-    border-style: solid none solid none;
+
+input:hover, input:focus {
+ background-color: rgb(20, 17, 20);
+ border: 2px solid rgb(32, 26, 32);
+ border-style: solid none solid none;
+}
+
+.selected {
+ background-color: rgb(20, 17, 20);
+}
+
+#level-section,
+#high_score_section, #help_section {
+ padding: 3vh 0vh;
+ background-color: black;
+ height: 100%;
+ text-align: center;
+}
+.details {
+ padding: 10px 20px;
+ color: #DFDFDF;
+ font-size: 0.75rem;
+ text-align: left;
+ max-width: 30rem;
+ margin: 0 auto;
+}
+.details ol {
+ padding: 10px;
+ padding-top: 0px;
+ margin: 5px;
+}
+.details p {
+ line-height: 160%;
+}
+.details li {
+ padding-left: 10px;
+ line-height: 160%;
 }
 .game {
-    margin: 0 auto;
-    max-width: 850px;
+ margin: 0 auto;
+ max-width: 850px;
 }
-svg {
-    padding: 0;
-    margin: 0;
-    background-color: #a56e74;
-	background-size: 7.14286% 3.5714%;
-	background-image: linear-gradient(to right, rgb(134 139 175) 1px, transparent 1px),
-    linear-gradient(to bottom, rgb(156 163 213) 1px, transparent 1px);
+
+canvas {
+ padding: 0;
+ margin: 0;
 }
-.svg, .info { 
-    float: left;
-    height: 100vh;
-    min-height: 320px;
+
+.canvas {
+ width: 220px;
+ background-color: black;
+ background-size: 7.14286% 3.5714%;
+ background-image: linear-gradient(to right, #3C3C3D 1px, transparent 1px),
+  linear-gradient(to bottom, #3C3C3D 1px, transparent 1px);
 }
-.svg {
-    width: 70%;
-    border-right: 2px solid #0f7f85;
-}
+
+.canvas,
 .info {
-    width: 30%;
+ float: left;
+ height: 500px;
+ min-height: 320px;
 }
+
+.info {
+ width: 80px;
+ display: flex;
+ flex-direction: column;
+ background-color: #191919;
+ padding-left: 5px;
+}
+
 .info #new-block {
-    height: 30%;
-    background-color: #af3924;
+ height: 6rem;
+ border-bottom: 1px solid #A77200;
+ display: flex;
+ align-items: center;
+ justify-content: center;
 }
+
 .info #info-block {
-    padding: 4%;
-    height: 70%;
-    background-color: var(--cyan);
+ padding: 4%;
+ flex-grow: 1;
 }
+
 .flex-container {
-    height: 100vh;
+ min-height: 100vh;
+ display: flex;
+ align-items: center;
+ justify-content: center;
 }
-.fuck-off {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 0;
-    width: 100%;
-    height: 100%;
+
+.fuck-off,
+.backArrow {
+ position: absolute;
+ top: 0;
+ left: 0;
+ z-index: 0;
+ width: 100%;
+ height: 100%;
 }
-@media screen and (min-width: var(--breakpoint-sm)) {
-    .welcome h1 {
-        font-size: 3rem;
-    }
+
+.backArrow {
+ z-index: 0;
+ width: 3rem;
+ height: 2.7rem;
+ margin: 2px;
+}
+
+.backArrow:hover {
+ opacity: 0.7;
+}
+
+.backArrow:focus {
+ outline: 1px solid #8C937A;
+}
+
+@media screen and (min-width: 576px) {
+ .welcome h1 {
+  font-size: 3rem;
+ }
 }

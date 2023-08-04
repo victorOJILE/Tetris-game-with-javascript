@@ -103,6 +103,7 @@ animation-iteration-count: infinite;
   transform: rotate(360deg);
  }
 }
+
 .welcome h1 {
  font-size: 2rem;
 }
@@ -178,14 +179,15 @@ input:hover, input:focus {
 canvas {
  padding: 0;
  margin: 0;
+ image-rendering: pixels
 }
 
 .canvas {
  width: 220px;
  background-color: black;
  background-size: 7.14286% 3.5714%;
- background-image: linear-gradient(to right, #3C3C3D 1px, transparent 1px),
-  linear-gradient(to bottom, #3C3C3D 1px, transparent 1px);
+ background-image: linear-gradient(to right, #282828 1px, transparent 1px),
+  linear-gradient(to bottom, #282828 1px, transparent 1px);
 }
 
 .canvas,

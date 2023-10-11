@@ -14,25 +14,13 @@
 <body>
  <main>
   <section class="main-page">
-   <div class="welcome" id="welcome-page" aria-hidden="false">
+   <div class="welcome" id="welcome-page">
     <h1>TETRIS</h1>
     <div>
      <div class="circle" role="">
       <div class="dot-circle"></div>
      </div>
     </div>
-   </div>
-   <div class="navigation hide">
-    <div class="heading">
-     <h1>TETRIS</h1>
-    </div>
-    <nav class="nav-main">
-     <form name="resume" class="hide" id="resume"><input type="submit" value="RESUME" /></form>
-     <form name="new_game"><input type="submit" value="NEW GAME" /></form>
-     <form name="level"><input type="submit" value="LEVEL" /></form>
-     <form name="high_score"><input type="submit" value="HIGH SCORE" /></form>
-     <form name="help"><input type="submit" value="HELP" /></form>
-    </nav>
    </div>
   </section>
   <section id="game-section">
@@ -67,99 +55,8 @@
     </div>
    </div>
   </section>
-  <section id="level-section" class="hide">
-    <div class="backArrow" id="backArrowLevel" tabindex="0">
-     <svg style="width: 40;height: 40;background: #50505050" viewbox="-5 0 40 40">
-      <g stroke="whitesmoke" stroke-width="2" stroke-linecap="round" fill="none">
-       <path d="M5 20 L27 20" />
-       <path d="M12 13 L4 20 L12 27" />
-      </g>
-     </svg>
-    </div>
-   <div class="level">
-    <h1>Levels</h1>
-   </div>
-   <div class="levelList">
-    <form name="level1" data-value="600"><input type="submit" value="Level 1" /></form>
-    <form name="level2" data-value="400"><input type="submit" value="Level 2" /></form>
-    <form name="level3". data-value="200"><input type="submit" value="Level 3" /></form>
-    <form name="level4" data-value="100"><input type="submit" value="Level 4" /></form>
-   </div>
-  </section>
-  <section id="high_score_section" class="hide">
-    <div class="backArrow" id="backArrowHS" tabindex="0">
-     <svg style="width: 40;height: 40;background: #50505050" viewbox="-5 0 40 40">
-      <g stroke="whitesmoke" stroke-width="2" stroke-linecap="round" fill="none">
-       <path d="M5 20 L27 20" />
-       <path d="M12 13 L4 20 L12 27" />
-      </g>
-     </svg>
-    </div>
-   <div class="level">
-    <h1>HIGH SCORE</h1>
-   </div>
-   <div id="HSList">
-    <div data-value="600">
-     <h4>Level 1</h4>
-     <small>0</small>
-    </div>
-    <div data-value="400">
-     <h4>Level 2</h4>
-     <small>0</small>
-    </div>
-    <div data-value="200">
-     <h4>Level 3</h4>
-     <small>0</small>
-    </div>
-    <div data-value="100">
-     <h4>Level 4</h4>
-     <small>0</small>
-    </div>
-   </div>
-  </section>
-  <section id="help_section" class="hide">
-    <div class="backArrow" id="backArrowHelp" tabindex="0">
-     <svg style="width: 40;height: 40;background: #50505050" viewbox="-5 0 40 40">
-      <g stroke="whitesmoke" stroke-width="2" stroke-linecap="round" fill="none">
-       <path d="M5 20 L27 20" />
-       <path d="M12 13 L4 20 L12 27" />
-      </g>
-     </svg>
-    </div>
-   <div class="level">
-    <h1>HELP</h1>
-   </div>
-   <div class="details">
-    <h3>How to play?</h3>
-    <p>Try to arrange the tetrominoes to completely fill up a line or more (no empty slot in that line).</p>
-    <h3>Controls 1:</h3>
-    <ol type="1">
-     <li>Move to the left with the left arrow.</li>
-     <li>Move to the right with the right arrow.</li>
-     <li>Change shape with the up arrow.</li>
-     <li>Drop down with the down arrow.</li>
-     <li>Press the spacebar key or ESC to pause game.</li>
-    </ol>
-    <h3>Controls 2:</h3>
-    <ol type="1">
-     <li>Click the top of the screen to change shape.</li>
-     <li>Click the middle left of the screen to move to the left.</li>
-     <li>Click the middle right of the screen to move to the right.</li>
-     <li>Click the bottom of the screen to drop down.</li>
-    </ol>
-   </div>
-  </section>
  </main>
 </body>
 <script src="lib/game.js"></script>
 <script src="lib/user_interface.js"></script>
-<script id="welcome">
- let welcome = document.getElementById('welcome-page');
- setTimeout(() => {
-  welcome.style.display = 'none';
-  welcome.ariaHidden = "true";
-  document.getElementsByClassName('navigation')[0].classList.remove('hide');
-  document.getElementById('welcome').remove();
- }, 1000);
-</script>
 </html>

@@ -31,8 +31,7 @@ main {
  margin: 0 auto;
 }
 .main-page,
-#level-section,
-#high_score_section, #help_section {
+#sections {
  min-height: 100%;
  position: absolute;
  top: 0;
@@ -144,8 +143,7 @@ input:hover, input:focus {
  background-color: rgb(20, 17, 20);
 }
 
-#level-section,
-#high_score_section, #help_section {
+#sections {
  padding: 3vh 0vh;
  background-color: black;
  height: 100%;
